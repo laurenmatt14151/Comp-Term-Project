@@ -468,7 +468,7 @@ int main(int argc, char *argv[])
               break;
 
        case 31 : // SHACC - display ACC.
-              traceF << Instr[25] << "    " << setw(2) << addr << "    "
+              traceF << Instr[31] << "    " << setw(2) << addr << "    "
                      << setw(4) << ACC << "==" << addr << endl;
               break;
 
