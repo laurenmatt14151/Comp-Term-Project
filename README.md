@@ -1,3 +1,3 @@
 # Comp-Term-Project
 
-## Lauren - When we edit the code save as a branch and I'll merge the changes myself into the main code
+## Lauren - If you want to change the code make a copy and save the updated code in here
