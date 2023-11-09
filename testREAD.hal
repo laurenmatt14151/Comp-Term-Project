@@ -1,0 +1,10 @@
+
+         .ALLOC 3
+A        .DATA
+B        .DATA
+
+         .BEGIN
+         READ A 
+         READ B 
+         HALT
+         .END
