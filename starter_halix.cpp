@@ -270,16 +270,6 @@ int main(int argc, char *argv[])
      //-| ---------------------------------
      //-| Execute decoded instruction. 
      //-| ---------------------------------
-     /*
-     1-5:     "READ  ","WRITE ","LOAD  ","STORE ","ADD   "
-     6-10:    ,"SUB   ", "MULT  ","DIV   ","MOD   ","BRANCH",
-     11-15:   "BRT   ","BRF   ", "CLEAR ","SET   ","DOUBLE",
-     16-20:   "INCR  ","DECR  ","CLT   ", "CLE   ","CEQ   ",
-     21-25:   "CNE   ","CGE   ","CGT   ", "SETI  ","ADDI  ",
-     26-30:   "SUBI  ","MULTI ","DIVI  ","MODI  ",  "POW   ",
-     31-33:   "SHACC ","BSUB  ","RET   "
-     */
-     
      switch (opcode)
      {
        case 01 : // READ
@@ -312,176 +302,24 @@ int main(int argc, char *argv[])
               traceF << Instr[05] << "    " << setw(2) << addr << "    "
                      << setw(4) << ACC << endl;
               break;
-       
-       case 06: //SUB
-              ACC = ACC - DM[addr];
-              traceF << Instr[06] << "    " << setw(2) << addr << "    "
-                     << setw(4) << ACC << endl;
-              break;
-       
-       case 07: //MULT
-              ACC = ACC * DM[addr];
-              traceF << Instr[07] << "    " << setw(2) << addr << "    "
-                     << setw(4) << ACC << endl;
-              break;
-
-       case 8: //DIV
-              ACC = ACC / DM[addr];
-              traceF << Instr[8] << "    " << setw(2) << addr << "    "
-                     << setw(4) << ACC << endl;
-              break;
-
-       case 9: //MOD
-              ACC = ACC % DM[addr];
-              traceF << Instr[9] << "    " << setw(2) << addr << "    "
-                     << setw(4) << ACC << endl;
-              break;
       
        case 10 : // BRANCH
               traceF << Instr[10] << "    " << setw(2) << addr << "    ";
               IP = addr;
               traceF << setw(2) << IP << endl;
               break;
-
-       case 11: //BRT
-              traceF << Instr[11] << "    " << setw(2) << addr << "    ";
-              if(ACC==1){
-                     IP = addr;
-              }
-              traceF << setw(2) << IP << endl;
-              break;
    
-       case 12: //BRF
-              traceF << Instr[12] << "    " << setw(2) << addr << "    ";
-              if(ACC==0){
-                     IP = addr;
-              }
-              traceF << setw(2) << IP << endl;
-              break;
-
-       case 13: //CLEAR
-              ACC = 0;
-              traceF << Instr[13] << "    " << setw(2) << addr << "    "
-                     << setw(4) << ACC << endl;
-              break;
-       
-       case 14: //SET
-              ACC = 1;
-              traceF << Instr[14] << "    " << setw(2) << addr << "    "
-                     << setw(4) << ACC << endl;
-              break;
-
-       case 15: //DOUBLE
-              ACC = ACC * 2;
-              traceF << Instr[15] << "    " << setw(2) << addr << "    "
-                     << setw(4) << ACC << endl;
-              break;
-
-       case 16: //INCR
-              ACC = ACC + 1;
-              traceF << Instr[16] << "    " << setw(2) << addr << "    "
-                     << setw(4) << ACC << endl;
-              break;
-       
-       case 17: //DECR
-              ACC = ACC - 1;
-              traceF << Instr[17] << "    " << setw(2) << addr << "    "
-                     << setw(4) << ACC << endl;
-              break;
-
-       case 18 : // CLT - Compare for less-than  
-              ACC = (ACC < DM[addr]);
-              traceF << Instr[18] << "    " << setw(2) << addr << "    "
-                     << setw(4) << ACC << endl;
-              break;
-       
-       case 19 : // CLE - Compare for less-than or equal to
-              ACC = (ACC <= DM[addr]);
-              traceF << Instr[19] << "    " << setw(2) << addr << "    "
-                     << setw(4) << ACC << endl;
-              break;
-
-       case 20 : // CEQ - Compare for equal to  
-              ACC = (ACC == DM[addr]);
-              traceF << Instr[20] << "    " << setw(2) << addr << "    "
-                     << setw(4) << ACC << endl;
-              break;
-
-       case 21 : // CNE - Compare for not equal to  
-              ACC = (ACC != DM[addr]);
-              traceF << Instr[21] << "    " << setw(2) << addr << "    "
-                     << setw(4) << ACC << endl;
-              break;
-
-       case 22 : // CGE - Compare for greater-than or equal to  
-              ACC = (ACC >= DM[addr]);
-              traceF << Instr[22] << "    " << setw(2) << addr << "    "
-                     << setw(4) << ACC << endl;
-              break;
-
+   
        case 23 : // CGT - Compare for greater-than  
               ACC = (ACC > DM[addr]);
               traceF << Instr[23] << "    " << setw(2) << addr << "    "
                      << setw(4) << ACC << endl;
               break;
    
-       case 24 : // SETI - set ACC to immediate value.
-              ACC = addr;
-              traceF << Instr[24] << "    " << setw(2) << addr << "    "
-                     << setw(4) << ACC << endl;
-              break;
 
        case 25 : // ADDI - add immediate value to ACC.
               ACC = ACC + addr;
               traceF << Instr[25] << "    " << setw(2) << addr << "    "
-                     << setw(4) << ACC << endl;
-              break;
-
-       case 26 : // SUBI - subtract immediate value from ACC.
-              ACC = ACC - addr;
-              traceF << Instr[26] << "    " << setw(2) << addr << "    "
-                     << setw(4) << ACC << endl;
-              break;
-
-       case 27 : // MULTI - multiply immediate value by ACC.
-              ACC = ACC * addr;
-              traceF << Instr[27] << "    " << setw(2) << addr << "    "
-                     << setw(4) << ACC << endl;
-              break;
-
-       case 28 : // DIVI - divide immediate value from ACC.
-              ACC = ACC / addr;
-              traceF << Instr[28] << "    " << setw(2) << addr << "    "
-                     << setw(4) << ACC << endl;
-              break;
-
-       case 29 : // MODI - modulate immediate value of ACC.
-              ACC = ACC % addr;
-              traceF << Instr[29] << "    " << setw(2) << addr << "    "
-                     << setw(4) << ACC << endl;
-              break;
-       
-       case 30 : // POW - square immediate value of ACC.
-              ACC = ACC * ACC;
-              traceF << Instr[30] << "    " << setw(2) << addr << "    "
-                     << setw(4) << ACC << endl;
-              break;
-
-       case 31 : // SHACC - display ACC.
-              traceF << Instr[31] << "    " << setw(2) << addr << "    "
-                     << setw(4) << ACC << "==" << addr << endl;
-              break;
-
-       case 32 : // BSUB - return address stored in return register RR.
-              RR = IP;
-              IP = addr;
-              traceF << Instr[32] << "    " << setw(2) << addr << "    "
-                     << setw(4) << ACC << endl;
-              break;
-
-       case 33 : // RET - return from BSUB.
-              IP = RR;
-              traceF << Instr[33] << "    " << setw(2) << addr << "    "
                      << setw(4) << ACC << endl;
               break;
    
@@ -544,3 +382,4 @@ int main(int argc, char *argv[])
   
   return 0;
 }
+

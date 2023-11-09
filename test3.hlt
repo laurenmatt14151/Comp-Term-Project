@@ -1,0 +1,70 @@
+
+INSTRUCTION MEMORY DUMP
+
+iADR  IMem  OPRTN  OPND
+====  ====  ====== ====
+  00  0100  READ   00
+  01  0101  READ   01
+  02  0300  LOAD   00
+  03  0801  DIV    01
+  04  0402  STORE  02
+  05  0202  WRITE  02
+  06  9900  HALT
+
+
+DATA MEMORY DUMP
+
+ADDR  DMem
+====  ====
+  00  0000
+  01  0000
+  02  0000
+  03  0000
+  04  0000
+  05  0000
+  06  0000
+  07  0000
+  08  0000
+  09  0000
+
+
+*********************
+HALIX EXECUTION TRACE
+(c) 2019, yourlogin First Last
+Program: test3.hlx
+*********************
+
+iADR  INST  OPRTN   OPND  RESULT
+----  ----  -----   ----  ------
+  00  0100  READ      00 <==0010
+  01  0101  READ      01 <==0002
+  02  0300  LOAD      00    0010
+  03  0801  DIV       01    0005
+  04  0402  STORE     02    0005
+  05  0202  WRITE     02 ==>0005
+  06  9900  HALT 
+
+----  ----  -----   ----  ------
+ADDR  INST  OPRTN   OPND  RESULT
+
+***************************
+END - HALIX EXECUTION TRACE
+Program: test3.hlx
+6 INSTRUCTIONS EXECUTED. 
+***************************
+
+
+DATA MEMORY DUMP
+
+ADDR  DMem
+====  ====
+  00  0010
+  01  0002
+  02  0005
+  03  0000
+  04  0000
+  05  0000
+  06  0000
+  07  0000
+  08  0000
+  09  0000
