@@ -4,7 +4,7 @@
 # TEST INCR: 10++ ==> 11
 # TEST DECR: 10 ==> 9
 
-         .ALLOC 
+         .ALLOC 2
 TEN      .DATA =10
 ACC      .DATA
 
