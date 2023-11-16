@@ -7,7 +7,7 @@
 # TEST BRT: ACC ==> 1
 
 
-      .ALLOC 
+      .ALLOC 1
 ACC   .DATA
 
 
