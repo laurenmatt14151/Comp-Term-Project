@@ -1,1 +1,31 @@
+#TESTING: BRANCH, BRT, BRF, CLEAR, SET
 
+# TEST BRANCH: ONLY OUTPUTS 1 OR 0
+# TEST CLEAR: ACC = 0
+# TEST SET: ACC = 1
+# TEST BRF: ACC ==> 0
+# TEST BRT: ACC ==> 1
+
+
+      .ALLOC 
+ACC   .DATA
+
+
+      .BEGIN
+       
+       CLEAR
+       BRF CLEAR:
+
+       SET
+       BRT SET:
+
+CLEAR: STORE ACC
+       WRITE ACC
+       BRANCH END:
+
+SET:   STORE ACC
+       WRITE ACC
+       BRANCH END:
+
+END:   HALT
+      .END
