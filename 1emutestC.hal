@@ -1,1 +1,14 @@
+#TESTING: DIV & MOD
 
+# TEST DIV: 35/5 ==> 7
+# TEST MOD: 35 % 10 ==> 5
+
+      .ALLOC 3
+A     .DATA =35
+B     .DATA =5
+C     .DATA =10
+
+      .BEGIN
+
+       HALT
+      .END
