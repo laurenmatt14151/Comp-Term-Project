@@ -1,0 +1,43 @@
+instruction       opcode         testprogram
+READ                01           1emutestA.hal
+WRITE               02           1emutestA.hal
+LOAD                03           1emutestA.hal
+STORE               04           1emutestA.hal
+
+ADD                 05           1emutestB.hal
+SUB                 06           1emutestB.hal
+MULT                07           1emutestB.hal
+
+DIV                 08           1emutestC.hal
+MOD                 09           1emutestC.hal
+
+BRANCH              10           1emutestD.hal
+BRT                 11           1emutestD.hal
+BRF                 12           1emutestD.hal
+CLEAR               13           1emutestD.hal
+SET                 14           1emutestD.hal
+
+DOUBLE              15           1emutestE.hal
+INCR                16           1emutestE.hal
+DECR                17           1emutestE.hal
+
+CLT                 18           1emutestF.hal
+CLE                 19           1emutestF.hal
+CEQ                 20           1emutestF.hal
+
+CNE                 21           1emutestG.hal
+CGE                 22           1emutestG.hal
+CGT                 23           1emutestG.hal
+
+SETI                24           1emutestH.hal
+ADDI                25           1emutestH.hal
+SUBI                26           1emutestH.hal
+
+MULTI               27           1emutestI.hal
+DIVI                28           1emutestI.hal
+MODI                29           1emutestI.hal
+
+POW                 30           1emutestJ.hal
+SHACC               31           1emutestJ.hal
+BSUB                32           1emutestJ.hal
+RET                 33           1emutestJ.hal
