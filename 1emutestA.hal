@@ -1,0 +1,21 @@
+#TESTING: READ, WRITE, LOAD, STORE
+
+# TEST READ: 00 <== 5 
+# TEST WRITE: Data Value: 5
+# TEST LOAD: ACC = 5
+# TEST STORE: 01 <== 5
+
+      .ALLOC 2
+A     .DATA
+B     .DATA
+
+      .BEGIN
+       
+       READ A 
+       WRITE A 
+       LOAD A 
+       STORE B 
+       WRITE B 
+
+       HALT
+      .END
