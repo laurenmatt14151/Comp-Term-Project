@@ -1,1 +1,14 @@
+#Testing: ADD, SUB, MULT
 
+# TEST ADD: 10+5 ==> 15
+# TEST SUB: 10-5 ==> 5
+# TEST MULT: 10 * 5 ==> 50
+
+      .ALLOC 2
+A     .DATA =10
+B     .DATA =5
+
+      .BEGIN
+
+       HALT
+      .END
