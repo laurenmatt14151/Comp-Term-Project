@@ -1,1 +1,29 @@
+#TESTING: DOUBLE, INCR, DECR
 
+# TEST DOUBLE: 2 * 10 ==> 20
+# TEST INCR: 10++ ==> 11
+# TEST DECR: 10 ==> 9
+
+         .ALLOC 
+TEN      .DATA =10
+ACC      .DATA
+
+         .BEGIN
+
+DOUBLE:  LOAD TEN
+         DOUBLE TEN
+         STORE ACC
+         WRITE ACC
+
+INCR:    LOAD TEN
+         INCR
+         STORE ACC
+         WRITE ACC
+
+DECR:    LOAD TEN
+         DECR
+         STORE ACC
+         WRITE ACC
+         
+         HALT
+         .END
