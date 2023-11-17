@@ -1,5 +1,30 @@
 #TESTING: CLT, CLE, CEQ
 
-# TEST CLT: 
-# TEST CLE: 
-# TEST CEQ: 
+# TEST CLT: 5 < 6, ACC ==> 1
+# TEST CLE: 5 <= 5, ACC ==> 1
+# TEST CEQ: 5 == 5, ACC ==> 1
+
+      .ALLOC 3
+FIVE  .DATA =5
+SIX   .DATA =6
+ACC   .DATA
+
+      .BEGIN
+
+CLT:   LOAD FIVE
+       CLT SIX
+       STORE ACC
+       WRITE ACC
+
+CLE:   LOAD FIVE
+       CLE FIVE
+       STORE ACC
+       WRITE ACC
+
+CEQ:   LOAD FIVE
+       CEQ FIVE
+       STORE ACC
+       WRITE ACC
+
+       HALT
+      .END
