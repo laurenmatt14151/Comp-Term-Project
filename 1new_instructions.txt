@@ -1,3 +1,5 @@
+Emulator Team: Lauren Matthews, Amarcus Brooks, Diamond Deas
+
 instruction       opcode         testprogram
 READ                01           1emutestA.hal
 WRITE               02           1emutestA.hal
