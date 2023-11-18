@@ -1,5 +1,18 @@
 #TESTING: MULTI, DIVI, MODI
 
-# TEST MULTI: 
-# TEST DIVI: 
-# TEST MODI: 
+# TEST MULTI: 3 * 12 ==> 36
+# TEST DIVI: 36 / 2 ==> 18
+# TEST MODI: 18 % 10 ==> 8
+
+            .ALLOC
+THREE
+TWELVE
+
+            .BEGIN
+
+MULT:       LOAD THREE
+            MULTI 12
+            STORE ACC
+            WRITE ACC
+
+D
