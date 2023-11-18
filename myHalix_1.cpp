@@ -13,6 +13,7 @@ using namespace std;
 // Output files: progname.hlt -- execution trace showing ACC, I/O, IP;  
 //                               DM dump; IM dump. 
 // Author:       cda3101joe Dr. Jones
+// Author:       SEVEN: Lauren Matthews, Amarcus Brooks, Diamond Deas
 // Date:         2010-18
 //----------------------------------------------------------------------------
 const int IMSIZE = 100;
@@ -208,6 +209,10 @@ int main(int argc, char *argv[])
   cout << "| HALIX version 1.7, (c) E. Jones, 2011. |" << endl;
   cout << "+----------------------------------------+" << endl;
 
+  cout << endl;
+  cout<< "SEVEN: Lauren Matthews, Amarcus Brooks, Diamond Deas"<< endl;
+  cout << endl;
+  cout << endl;
   //-| -----------------------------------------------------------------
   //-| Loader: Load executable program into the computer memory (IM+DM).
   //-| -----------------------------------------------------------------
