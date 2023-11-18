@@ -3,6 +3,7 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
+#include <cmath>
 using namespace std;
 
 //----------------------------------------------------------------------------
@@ -338,24 +339,24 @@ int main(int argc, char *argv[])
               break;
       
        case 10 : // BRANCH
-              traceF << Instr[10] << "    " << setw(2) << addr << "    ";
               IP = addr;
+              traceF << Instr[10] << "    " << setw(2) << addr << "    ";
               traceF << setw(2) << IP << endl;
               break;
 
        case 11: //BRT
-              traceF << Instr[11] << "    " << setw(2) << addr << "    ";
               if(ACC==1){
                      IP = addr;
               }
+              traceF << Instr[11] << "    " << setw(2) << addr << "    ";
               traceF << setw(2) << IP << endl;
               break;
    
        case 12: //BRF
-              traceF << Instr[12] << "    " << setw(2) << addr << "    ";
               if(ACC==0){
                      IP = addr;
               }
+              traceF << Instr[12] << "    " << setw(2) << addr << "    ";
               traceF << setw(2) << IP << endl;
               break;
 
@@ -462,7 +463,7 @@ int main(int argc, char *argv[])
               break;
        
        case 30 : // POW - square immediate value of ACC.
-              ACC = ACC * ACC;
+              ACC = pow(addr, ACC);
               traceF << Instr[30] << "    " << setw(2) << addr << "    "
                      << setw(4) << ACC << endl;
               break;
