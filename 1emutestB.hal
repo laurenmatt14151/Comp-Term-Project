@@ -13,11 +13,18 @@ ACC   .DATA
 
 ADD:  LOAD TEN
       ADD FIVE
-      
+      STORE ACC
+      WRITE ACC
 
-SUB:
+SUB:  LOAD TEN
+      SUB FIVE
+      STORE ACC
+      WRITE ACC
 
-MULT:
+MULT: LOAD TEN
+      MULT FIVE
+      STORE ACC
+      WRITE ACC
 
        HALT
       .END
