@@ -5,8 +5,8 @@
 # TEST MODI: 18 % 10 ==> 8
 
             .ALLOC
-THREE
-TWELVE
+THREE       .DATA =3
+ACC         .DATA
 
             .BEGIN
 
@@ -15,4 +15,13 @@ MULT:       LOAD THREE
             STORE ACC
             WRITE ACC
 
-D
+DIVI:       DIVI 2
+            STORE ACC
+            WRITE ACC
+
+MODI:       MODI 10
+            STORE ACC
+            WRITE ACC
+
+            HALT
+           .END
