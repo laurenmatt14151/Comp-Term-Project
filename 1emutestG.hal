@@ -1,5 +1,30 @@
 #TESTING: CNE, CGE, CGT
 
-# TEST CNE: 
-# TEST CGE: 
-# TEST CGT: 
+# TEST CNE: 3 != 2, ACC ==> 1
+# TEST CGE: 3 >= 2, ACC ==> 1
+# TEST CGT: 3 > 2, ACC ==> 1
+
+          .ALLOC 3
+THREE     .DATA =3
+TWO       .DATA =2
+ACC       .DATA 
+
+          .BEGIN
+
+CNE:      LOAD THREE
+          CNE TWO
+          STORE ACC
+          WRITE ACC
+
+CGE:      LOAD THREE
+          CGE TWO
+          STORE ACC
+          WRITE ACC
+
+CGT:      LOAD THREE
+          CGT TWO
+          STORE ACC
+          WRITE ACC
+
+           HALT
+          .END
