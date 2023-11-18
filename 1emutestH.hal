@@ -1,5 +1,26 @@
 #TESTING: SETI, ADDI, SUBI
 
-# TEST SETI: 
-# TEST ADDI: 
-# TEST SUBI: 
+# TEST SETI: ACC <== 5, ACC ==> 5
+# TEST ADDI: ACC + 12 ==> 17
+# TEST SUBI: ACC - 4 ==> 15
+
+          .ALLOC 1
+ACC       .DATA
+
+          .BEGIN
+
+SETI:      SETI 5
+           STORE ACC
+           WRITE ACC
+
+ADDI:      ADDI 12
+           STORE ACC
+           WRITE ACC
+
+SUBi:      SUBI 4
+           STORE ACC
+           WRTIE ACC
+
+           HALT
+          .END
+
