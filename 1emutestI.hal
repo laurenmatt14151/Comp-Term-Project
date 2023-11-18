@@ -4,7 +4,7 @@
 # TEST DIVI: 36 / 2 ==> 18
 # TEST MODI: 18 % 10 ==> 8
 
-            .ALLOC
+            .ALLOC 2
 THREE       .DATA =3
 ACC         .DATA
 
