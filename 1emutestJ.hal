@@ -1,6 +1,21 @@
 #TESTING: POW, SHACC, BSUB, RET
 
-# TEST POW:
-# TEST SHACC:
-# TEST BSUB: 
-# TEST RET: 
+# TEST BSUB: IP --> POW:
+# TEST POW: 5^2 = 25
+# TEST RET: RR --> SCHACC
+# TEST SHACC: ACC ==> 25
+
+        .ALLOC 2
+TWO     .DATA =2
+FIVE    .DATA =5
+
+        .BEGIN
+
+         LOAD TWO
+
+BSUB:    BSUB POW:
+
+SHACC:   SHACC
+
+POW:    POW FIVE
+        RET
