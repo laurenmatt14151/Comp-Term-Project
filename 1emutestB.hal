@@ -4,11 +4,20 @@
 # TEST SUB: 10-5 ==> 5
 # TEST MULT: 10 * 5 ==> 50
 
-      .ALLOC 2
-A     .DATA =10
-B     .DATA =5
+      .ALLOC 3
+TEN   .DATA =10
+FIVE  .DATA =5
+ACC   .DATA
 
       .BEGIN
+
+ADD:  LOAD TEN
+      ADD FIVE
+      
+
+SUB:
+
+MULT:
 
        HALT
       .END
