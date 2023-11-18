@@ -1,0 +1,62 @@
+
+INSTRUCTION MEMORY DUMP
+
+iADR  IMem  OPRTN  OPND
+====  ====  ====== ====
+  00  0300  LOAD   00
+  01  2712  MULTI  12
+  02  0401  STORE  01
+  03  0201  WRITE  01
+  04  2802  DIVI   02
+  05  0401  STORE  01
+  06  0201  WRITE  01
+  07  2910  MODI   10
+  08  0401  STORE  01
+  09  0201  WRITE  01
+  10  9900  HALT
+
+
+DATA MEMORY DUMP
+
+ADDR  DMem
+====  ====
+  00  0003
+  01  9999
+
+
+*********************
+HALIX EXECUTION TRACE
+(c) 2019, yourlogin First Last
+Program: 1emutestI.hlx
+*********************
+
+iADR  INST  OPRTN   OPND  RESULT
+----  ----  -----   ----  ------
+  00  0300  LOAD      00    0003
+  01  2712  MULTI     12    0036
+  02  0401  STORE     01    0036
+  03  0201  WRITE     01 ==>0036
+  04  2802  DIVI      02    0018
+  05  0401  STORE     01    0018
+  06  0201  WRITE     01 ==>0018
+  07  2910  MODI      10    0008
+  08  0401  STORE     01    0008
+  09  0201  WRITE     01 ==>0008
+  10  9900  HALT 
+
+----  ----  -----   ----  ------
+ADDR  INST  OPRTN   OPND  RESULT
+
+***************************
+END - HALIX EXECUTION TRACE
+Program: 1emutestI.hlx
+10 INSTRUCTIONS EXECUTED. 
+***************************
+
+
+DATA MEMORY DUMP
+
+ADDR  DMem
+====  ====
+  00  0003
+  01  0008

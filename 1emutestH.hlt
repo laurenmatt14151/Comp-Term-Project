@@ -1,0 +1,58 @@
+
+INSTRUCTION MEMORY DUMP
+
+iADR  IMem  OPRTN  OPND
+====  ====  ====== ====
+  00  2405  SETI   05
+  01  0400  STORE  00
+  02  0200  WRITE  00
+  03  2512  ADDI   12
+  04  0400  STORE  00
+  05  0200  WRITE  00
+  06  2604  SUBI   04
+  07  0400  STORE  00
+  08  0200  WRITE  00
+  09  9900  HALT
+
+
+DATA MEMORY DUMP
+
+ADDR  DMem
+====  ====
+  00  0001
+
+
+*********************
+HALIX EXECUTION TRACE
+(c) 2019, yourlogin First Last
+Program: 1emutestH.hlx
+*********************
+
+iADR  INST  OPRTN   OPND  RESULT
+----  ----  -----   ----  ------
+  00  2405  SETI      05    0005
+  01  0400  STORE     00    0005
+  02  0200  WRITE     00 ==>0005
+  03  2512  ADDI      12    0017
+  04  0400  STORE     00    0017
+  05  0200  WRITE     00 ==>0017
+  06  2604  SUBI      04    0013
+  07  0400  STORE     00    0013
+  08  0200  WRITE     00 ==>0013
+  09  9900  HALT 
+
+----  ----  -----   ----  ------
+ADDR  INST  OPRTN   OPND  RESULT
+
+***************************
+END - HALIX EXECUTION TRACE
+Program: 1emutestH.hlx
+9 INSTRUCTIONS EXECUTED. 
+***************************
+
+
+DATA MEMORY DUMP
+
+ADDR  DMem
+====  ====
+  00  0013

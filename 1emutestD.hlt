@@ -1,0 +1,58 @@
+
+INSTRUCTION MEMORY DUMP
+
+iADR  IMem  OPRTN  OPND
+====  ====  ====== ====
+  00  1300  CLEAR  00
+  01  1204  BRF    04
+  02  1400  SET    00
+  03  1107  BRT    07
+  04  0400  STORE  00
+  05  0200  WRITE  00
+  06  1002  BRANCH 02
+  07  0400  STORE  00
+  08  0200  WRITE  00
+  09  9900  HALT
+
+
+DATA MEMORY DUMP
+
+ADDR  DMem
+====  ====
+  00  9999
+
+
+*********************
+HALIX EXECUTION TRACE
+(c) 2019, yourlogin First Last
+Program: 1emutestD.hlx
+*********************
+
+iADR  INST  OPRTN   OPND  RESULT
+----  ----  -----   ----  ------
+  00  1300  CLEAR     00    0000
+  01  1204  BRF       04    04
+  04  0400  STORE     00    0000
+  05  0200  WRITE     00 ==>0000
+  06  1002  BRANCH    02    02
+  02  1400  SET       00    0001
+  03  1107  BRT       07    07
+  07  0400  STORE     00    0001
+  08  0200  WRITE     00 ==>0001
+  09  9900  HALT 
+
+----  ----  -----   ----  ------
+ADDR  INST  OPRTN   OPND  RESULT
+
+***************************
+END - HALIX EXECUTION TRACE
+Program: 1emutestD.hlx
+9 INSTRUCTIONS EXECUTED. 
+***************************
+
+
+DATA MEMORY DUMP
+
+ADDR  DMem
+====  ====
+  00  0001

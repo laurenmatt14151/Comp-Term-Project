@@ -1,0 +1,52 @@
+
+INSTRUCTION MEMORY DUMP
+
+iADR  IMem  OPRTN  OPND
+====  ====  ====== ====
+  00  0300  LOAD   00
+  01  3204  BSUB   04
+  02  3100  SHACC  00
+  03  9900  HALT
+  04  3001  POW    01
+  05  3300  RET    00
+
+
+DATA MEMORY DUMP
+
+ADDR  DMem
+====  ====
+  00  0002
+  01  0005
+
+
+*********************
+HALIX EXECUTION TRACE
+(c) 2019, yourlogin First Last
+Program: 1emutestJ.hlx
+*********************
+
+iADR  INST  OPRTN   OPND  RESULT
+----  ----  -----   ----  ------
+  00  0300  LOAD      00    0002
+  01  3204  BSUB      04    0002
+  04  3001  POW       01    0001
+  05  3300  RET       00    0001
+  02  3100  SHACC     00    0001==0
+  03  9900  HALT 
+
+----  ----  -----   ----  ------
+ADDR  INST  OPRTN   OPND  RESULT
+
+***************************
+END - HALIX EXECUTION TRACE
+Program: 1emutestJ.hlx
+5 INSTRUCTIONS EXECUTED. 
+***************************
+
+
+DATA MEMORY DUMP
+
+ADDR  DMem
+====  ====
+  00  0002
+  01  0005
